@@ -1,0 +1,10 @@
+.env
+
+# production
+/dist
+
+# dependencies
+/node_modules
+
+# ideas
+/.idea

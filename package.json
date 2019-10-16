@@ -1,0 +1,40 @@
+{
+  "name": "telegram-bot-saved-words",
+  "version": "1.0.0",
+  "description": "telegram-bot-saved-words",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\"  \"npm run watch-ts\" \"npm run watch-node\"",
+    "build": "npm run build-ts && npm run tslint",
+    "server-debug": "nodemon --inspect dist/bot.js",
+    "watch-node": "nodemon dist/bot.js",
+    "watch-ts": "tsc -w",
+    "build-ts": "tsc",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "author": "Sergey Tokar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.6.0",
+    "request": "^2.88.0",
+    "telegraf": "^3.30.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.11",
+    "@types/dotenv": "^6.1.1",
+    "@types/lodash": "^4.14.134",
+    "@types/mongoose": "^5.5.6",
+    "@types/node": "^10.14.9",
+    "@types/request-promise": "^4.1.44",
+    "concurrently": "^4.1.0",
+    "moment": "^2.24.0",
+    "nodemon": "^1.19.1",
+    "request-promise": "^4.2.4",
+    "ts-node": "^8.2.0",
+    "tslint": "^5.17.0",
+    "typescript": "^3.5.2"
+  }
+}
